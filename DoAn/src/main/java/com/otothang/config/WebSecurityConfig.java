@@ -1,6 +1,6 @@
 //package com.otothang.config;
 //
-//import com.otothang.Service.CustomOAuth2UserService;
+//import com.otothang.Service.Impl.CustomOAuth2UserService;
 //import com.otothang.Service.UserService;
 //import com.otothang.customOAuth2.CustomOAuth2User;
 //import jakarta.servlet.ServletException;

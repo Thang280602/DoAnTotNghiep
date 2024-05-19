@@ -1,7 +1,8 @@
-package com.otothang.Service;
+package com.otothang.Service.Impl;
 
 import java.util.List;
 
+import com.otothang.Service.CardItemSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,7 @@ import com.otothang.Repository.CardItemRepository;
 import com.otothang.models.CardItem;
 
 @Service
-public class CardItemSeviceImpl implements CardItemSevice{
+public class CardItemSeviceImpl implements CardItemSevice {
 	@Autowired
 	private CardItemRepository cardItemRepository;
 	@Override

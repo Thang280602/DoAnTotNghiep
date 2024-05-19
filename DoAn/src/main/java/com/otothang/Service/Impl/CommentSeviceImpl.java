@@ -1,7 +1,8 @@
-package com.otothang.Service;
+package com.otothang.Service.Impl;
 
 import java.util.List;
 
+import com.otothang.Service.CommentSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,7 @@ import com.otothang.Repository.CommentRepository;
 import com.otothang.models.Comment;
 
 @Service
-public class CommentSeviceImpl implements CommentSevice{
+public class CommentSeviceImpl implements CommentSevice {
 	@Autowired
 	private CommentRepository commentRepository;
 

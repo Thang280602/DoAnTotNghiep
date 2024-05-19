@@ -1,4 +1,4 @@
-package com.otothang.controllers;
+package com.otothang.controllers.home;
 
 import com.otothang.Service.BlogService;
 import com.otothang.Service.CategorySevice;

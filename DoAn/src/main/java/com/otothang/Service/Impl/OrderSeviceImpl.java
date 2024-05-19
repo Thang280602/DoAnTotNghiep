@@ -1,7 +1,8 @@
-package com.otothang.Service;
+package com.otothang.Service.Impl;
 
 import java.util.List;
 
+import com.otothang.Service.OrderSevice;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,7 @@ import com.otothang.Repository.OrderRepository;
 import com.otothang.models.Order;
 @Transactional
 @Service
-public class OrderSeviceImpl implements OrderSevice{
+public class OrderSeviceImpl implements OrderSevice {
 	@Autowired
 	private OrderRepository orderRepository;
 	@Override

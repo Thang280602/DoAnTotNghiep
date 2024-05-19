@@ -1,7 +1,8 @@
-package com.otothang.Service;
+package com.otothang.Service.Impl;
 
 import java.util.List;
 
+import com.otothang.Service.InformationShopSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import com.otothang.models.Blog;
 import com.otothang.models.InformationShop;
 
 @Service
-public class InformationShopSeviceImpl implements InformationShopSevice{
+public class InformationShopSeviceImpl implements InformationShopSevice {
 	@Autowired
 	private InformationShopRepository informationShopRepository;
 	

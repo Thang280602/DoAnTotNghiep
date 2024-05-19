@@ -1,8 +1,9 @@
-package com.otothang.Service;
+package com.otothang.Service.Impl;
 
 import java.awt.print.Pageable;
 import java.util.List;
 
+import com.otothang.Service.CategorySevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Service;
 import com.otothang.Repository.CategoryRepository;
 import com.otothang.models.Category;
 @Service
-public class CategorySeviceImpl implements CategorySevice{
+public class CategorySeviceImpl implements CategorySevice {
 	@Autowired
 	private CategoryRepository categoryRepository;
 	@Override

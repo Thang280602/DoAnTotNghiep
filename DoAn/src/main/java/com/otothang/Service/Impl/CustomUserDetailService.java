@@ -1,9 +1,10 @@
-package com.otothang.Service;
+package com.otothang.Service.Impl;
 
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.otothang.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,7 +1,8 @@
-package com.otothang.Service;
+package com.otothang.Service.Impl;
 
 import java.util.List;
 
+import com.otothang.Service.OrderDetailSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import com.otothang.models.Order;
 import com.otothang.models.OrderDetail;
 
 @Service
-public class OrderDetailSeviceImpl implements OrderDetailSevice{
+public class OrderDetailSeviceImpl implements OrderDetailSevice {
 	@Autowired
 	private OrderDetailRepository detailRepository;
 	@Override

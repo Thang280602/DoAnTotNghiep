@@ -1,5 +1,6 @@
-package com.otothang.Service;
+package com.otothang.Service.Impl;
 
+import com.otothang.Service.ImageProductSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -7,7 +8,7 @@ import com.otothang.Repository.ImageProductRepository;
 import com.otothang.models.ImageProduct;
 
 @Service
-public class ImageProductSeviceImpl implements ImageProductSevice{
+public class ImageProductSeviceImpl implements ImageProductSevice {
 	@Autowired
 	public ImageProductRepository imageProductRepository;
 	@Override

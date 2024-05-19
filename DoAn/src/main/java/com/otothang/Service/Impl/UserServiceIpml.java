@@ -1,9 +1,10 @@
-package com.otothang.Service;
+package com.otothang.Service.Impl;
 
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.UUID;
 
+import com.otothang.Service.UserService;
 import com.otothang.models.Order;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;

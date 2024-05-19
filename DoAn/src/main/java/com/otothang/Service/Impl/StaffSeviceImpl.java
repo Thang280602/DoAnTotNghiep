@@ -1,30 +1,32 @@
-package com.otothang.Service;
+package com.otothang.Service.Impl;
 
 import java.util.List;
 
+import com.otothang.Service.StaffSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import com.otothang.Repository.BlogRepository;
-import com.otothang.models.Blog;
+import com.otothang.Repository.StaffRepository;
 import com.otothang.models.Category;
+import com.otothang.models.Staff;
+
 @Service
-public class BlogServiceImpl implements BlogService{
+public class StaffSeviceImpl implements StaffSevice {
 	@Autowired
-	private BlogRepository blogRepository;
+	private StaffRepository staffRepository;
 	@Override
-	public List<Blog> getAll() {
+	public List<Staff> getAll() {
 		// TODO Auto-generated method stub
-		return this.blogRepository.findAll();
+		return this.staffRepository.findAll();
 	}
 
 	@Override
-	public Boolean create(Blog blog) {
+	public Boolean create(Staff staff) {
 		try {
-			this.blogRepository.save(blog);
+			this.staffRepository.save(staff);
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -33,14 +35,15 @@ public class BlogServiceImpl implements BlogService{
 	}
 
 	@Override
-	public Blog findById(Integer id) {
-		return this.blogRepository.findById(id).get();
+	public Staff findById(Integer id) {
+		// TODO Auto-generated method stub
+		return this.staffRepository.findById(id).get();
 	}
 
 	@Override
-	public Boolean update(Blog blog) {
+	public Boolean update(Staff staff) {
 		try {
-			this.blogRepository.save(blog);
+			this.staffRepository.save(staff);
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -51,7 +54,7 @@ public class BlogServiceImpl implements BlogService{
 	@Override
 	public Boolean delete(Integer id) {
 		try {
-			this.blogRepository.delete(findById(id));
+			this.staffRepository.delete(findById(id));
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -60,25 +63,26 @@ public class BlogServiceImpl implements BlogService{
 	}
 
 	@Override
-	public List<Blog> searchCategory(String keyword) {
+	public List<Staff> searchStaff(String keyword) {
 		// TODO Auto-generated method stub
-		return this.blogRepository.searchCategory(keyword);
+		return this.staffRepository.searchStaff(keyword);
 	}
 
 	@Override
-	public Page<Blog> getAll(Integer pageNo) {
+	public Page<Staff> getAll(Integer pageNo) {
+		// TODO Auto-generated method stub
 		PageRequest pageable = PageRequest.of(pageNo-1, 2);
-		return this.blogRepository.findAll(pageable);
+		return this.staffRepository.findAll(pageable);
 	}
 
 	@Override
-	public Page<Blog> searchCategory(String keyword, Integer pageNo) {
-		List list=this.blogRepository.searchCategory(keyword);
+	public Page<Staff> searchStaff(String keyword, Integer pageNo) {
+		List list=this.staffRepository.searchStaff(keyword);
 		PageRequest pageable=PageRequest.of(pageNo-1, 2);
 		Integer start=(int) pageable.getOffset();
 		Integer end=(int) (pageable.getOffset()+pageable.getPageSize()>list.size()?list.size():pageable.getOffset()+pageable.getPageSize());
 		list=list.subList(start, end);
-		return new PageImpl<Blog>(list,pageable, this.searchCategory(keyword).size());
+		return new PageImpl<Staff>(list,pageable, this.searchStaff(keyword).size());
 	}
 
 }
